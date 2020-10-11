@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.mobiquitytest.demo.data.response.TodayWeatherResponse" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_bg"
+        tools:context=".ui.fragment.CityDetailFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp16">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{data.name}"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/dp40"
+                tools:text="Ahmedabad" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp40"
+                android:text="@{String.format(@string/celsius, data.main.temp)}"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/dp60" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp5"
+                android:text="@{String.format(@string/temp_min_max_name, data.weather[0].main,data.main.tempMin,data.main.tempMax)}"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/dp20" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dp5"
+                        android:text="Wind S/D"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/dp16"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dp5"
+                        android:text="@{String.format(@string/speed_text,data.wind.speed*3.6)}"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/dp12"
+                        android:textStyle="bold"
+                        tools:text="4/ 70 deg" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dp5"
+                        android:text="Visibility"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/dp16"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dp5"
+                        android:text="@{String.format(@string/visibility_text,data.visibility/1000)}"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/dp12"
+                        android:textStyle="bold"
+                        tools:text="1000" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp16"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dp5"
+                        android:text="Humidity"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/dp16"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dp5"
+                        android:text="@{String.format(@string/humidity_text,data.main.humidity)}"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/dp12"
+                        android:textStyle="bold"
+                        tools:text="10%" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dp5"
+                        android:text="Pressure"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/dp16"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dp5"
+                        android:text="@{data.main.pressure.toString()}"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/dp12"
+                        android:textStyle="bold"
+                        tools:text="10" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

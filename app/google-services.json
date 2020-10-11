@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "547187233203",
+    "firebase_url": "https://practicletest-76b41.firebaseio.com",
+    "project_id": "practicletest-76b41",
+    "storage_bucket": "practicletest-76b41.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547187233203:android:c2f95501a11e24acd47bc6",
+        "android_client_info": {
+          "package_name": "com.mobiquitytest.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547187233203-d91e211j3mcai6mcec5fgqdvltskjsmh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpvsxp4vjdjZzu9oRPq6gsJNbm7_Tcj8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "547187233203-d91e211j3mcai6mcec5fgqdvltskjsmh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
